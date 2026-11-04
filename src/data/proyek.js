@@ -30,7 +30,7 @@ export const proyek = [
         slug: "pengelolaan-database",
         judul: " Database Management System ",
         kategori: ["SQL", "MariaDB", "MySQL", "XAMPP"],
-        gambar: "/proyek/pengelolaan-database.png",
+        gambar: "/proyek/Pengelolaan-Database.png",
         deskripsi: "Database Management System merupakan kegiatan praktik pengelolaan basis data menggunakan MariaDB melalui XAMPP dan Command Prompt. Proyek ini bertujuan untuk memahami konsep dasar database serta mempelajari penggunaan Structured Query Language (SQL) dalam mengelola data.",
         fitur: [
             "Mengakses MariaDB melalui Command Prompt",
@@ -45,7 +45,7 @@ export const proyek = [
         slug: "portofolio-pribadi",
         judul: "Website Portofolio Pribadi",
         kategori: ["HTML", "CSS", "JavaScript", "Next.js", "React"],
-        gambar: "/proyek/portofolio.png",
+        gambar: "/proyek/Portofolio.png",
         deskripsi: "Website Portofolio Pribadi merupakan website yang dibuat sebagai media untuk memperkenalkan identitas, kemampuan, pengalaman, dan hasil karya dalam bidang teknologi. Website ini menampilkan informasi tentang diri saya sebagai siswa Rekayasa Perangkat Lunak yang memiliki minat dalam pengembangan website dan pemrograman.",
         fitur: [
             "Halaman profil pribadi",
