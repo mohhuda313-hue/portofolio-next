@@ -16,26 +16,26 @@ export default function FilterProyek({ proyek = [] }) {
   const [kategori, setKategori] = useState("Semua");
   const [kata, setKata] = useState("");
 
-  // Mengubah kata pencarian menjadi huruf kecil
-  const kataKecil = kata.toLowerCase().trim();
-
-  // Filter proyek
   const hasil = proyek.filter((p) => {
+    // Mengambil teknologi proyek
     const teknologi = Array.isArray(p.teknologi)
       ? p.teknologi
-      : (p.teknologi || "").split(",");
+      : String(p.teknologi || "").split(",");
 
     const daftarTeknologi = teknologi.map((item) =>
       String(item).trim().toLowerCase()
     );
 
-    // Kode 6.5: Pencarian kategori
+    // Pencarian kategori
     const cocokKategori =
       kategori === "Semua" ||
-      p.kategori === kategori ||
-      daftarTeknologi.includes(kategori.toLowerCase());
+      String(p.kategori || "").toLowerCase() ===
+        kategori.toLowerCase() ||
+      daftarTeknologi.some((item) =>
+        item.includes(kategori.toLowerCase())
+      );
 
-    // Kode 6.5: Pencarian judul dan deskripsi
+    // Pencarian judul dan deskripsi
     const judul = String(
       p.judul || p.nama_project || ""
     ).toLowerCase();
@@ -44,10 +44,18 @@ export default function FilterProyek({ proyek = [] }) {
       p.deskripsi || ""
     ).toLowerCase();
 
+    const kataKecil = kata.trim().toLowerCase();
+
     const cocokJudul = judul.includes(kataKecil);
     const cocokDeskripsi = deskripsi.includes(kataKecil);
 
-    const cocokKata = cocokJudul || cocokDeskripsi;
+    const cocokKata =
+      kataKecil === "" ||
+      cocokJudul ||
+      cocokDeskripsi ||
+      daftarTeknologi.some((item) =>
+        item.includes(kataKecil)
+      );
 
     return cocokKategori && cocokKata;
   });
@@ -55,7 +63,7 @@ export default function FilterProyek({ proyek = [] }) {
   return (
     <div className="mt-8">
 
-      {/* Filter Kategori */}
+      {/* Tombol Kategori */}
       <div className="flex flex-wrap gap-2">
         {daftarKategori.map((k) => (
           <button
@@ -73,6 +81,7 @@ export default function FilterProyek({ proyek = [] }) {
 
       {/* Kotak Pencarian */}
       <div className="mt-6">
+
         <label
           htmlFor="cari"
           className="block font-semibold"
@@ -99,16 +108,18 @@ export default function FilterProyek({ proyek = [] }) {
             Hapus pencarian
           </button>
         )}
-      </div>
 
-      {/* Kode 6.7: Jumlah Hasil */}
-      <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-        Menampilkan {hasil.length} dari {proyek.length} proyek
-      </p>
+        {/* Kode 6.7: Jumlah Hasil */}
+        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          Menampilkan {hasil.length} dari {proyek.length} proyek
+        </p>
+
+      </div>
 
       {/* Daftar Proyek */}
       {hasil.length > 0 ? (
         <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
           {hasil.map((item) => (
             <ProyekCard
               key={
@@ -119,6 +130,7 @@ export default function FilterProyek({ proyek = [] }) {
               proyek={item}
             />
           ))}
+
         </div>
       ) : (
         <p className="mt-6 rounded-xl border border-dashed border-gray-300 dark:border-gray-600 p-6 text-center text-gray-500">

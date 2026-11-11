@@ -44,7 +44,7 @@ export const proyek = [
         {
         slug: "portofolio-pribadi",
         judul: "Website Portofolio Pribadi",
-        kategori: ["Next.js"],
+        kategori: ["CSS"],
         gambar: "/proyek/Portofolio.png",
         deskripsi: "Website Portofolio Pribadi merupakan website yang dibuat sebagai media untuk memperkenalkan identitas, kemampuan, pengalaman, dan hasil karya dalam bidang teknologi. Website ini menampilkan informasi tentang diri saya sebagai siswa Rekayasa Perangkat Lunak yang memiliki minat dalam pengembangan website dan pemrograman.",
         fitur: [
