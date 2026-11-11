@@ -58,13 +58,13 @@ export default function Tentang() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 space-y-6">
 
-      <h1 className="text-3xl font-bold text-utama md:text-4xl">
+      <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
         Tentang Saya
       </h1>
 
       {/* Perkenalan */}
       <Kartu judul="Perkenalan">
-        <p className="text-gray-700">
+        <p className="text-gray-700 dark:text-gray-300">
           Halo! Saya M.Miftakhul Huda, seorang siswa SMK yang
           bersemangat dalam dunia pengembangan web. Saat ini,
           saya sedang menempuh pendidikan di jurusan Rekayasa
@@ -78,7 +78,7 @@ export default function Tentang() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 
         <Kartu judul="Hobi">
-          <ul className="list-disc pl-5 text-gray-700">
+          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
             {hobbies.map((hobi, index) => (
               <li key={index}>{hobi}</li>
             ))}
@@ -86,7 +86,7 @@ export default function Tentang() {
         </Kartu>
 
         <Kartu judul="Cita-cita">
-          <ul className="list-disc pl-5 text-gray-700">
+          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
             {citaCitas.map((cita, index) => (
               <li key={index}>{cita}</li>
             ))}
@@ -98,16 +98,16 @@ export default function Tentang() {
       {/* Jadwal Belajar */}
       <Kartu judul="Jadwal Belajar">
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse border border-gray-300 text-gray-700">
+          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
             <thead>
               <tr className="bg-utama text-white">
-                <th className="border border-gray-300 px-4 py-2">
+                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2">
                   Hari
                 </th>
-                <th className="border border-gray-300 px-4 py-2">
+                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2">
                   Waktu
                 </th>
-                <th className="border border-gray-300 px-4 py-2">
+                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2">
                   Kegiatan
                 </th>
               </tr>
@@ -116,13 +116,13 @@ export default function Tentang() {
             <tbody>
               {jadwals.map((jadwal) => (
                 <tr key={jadwal.id}>
-                  <td className="border border-gray-300 px-4 py-2">
+                  <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
                     {jadwal.hari}
                   </td>
-                  <td className="border border-gray-300 px-4 py-2">
+                  <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
                     {jadwal.jam}
                   </td>
-                  <td className="border border-gray-300 px-4 py-2">
+                  <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
                     {jadwal.kegiatan}
                   </td>
                 </tr>

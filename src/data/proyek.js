@@ -2,7 +2,7 @@ export const proyek = [
     {
         slug: "katalog-produk",
         judul: "Website Katalog Produk",
-        kategori: ["HTML", "CSS"],
+        kategori: ["HTML"],
         gambar: "/proyek/katalog-produk.png",
         deskripsi: "Website Katalog Produk merupakan sebuah platform yang dirancang untuk menampilkan berbagai produk secara menarik, modern, dan terstruktur.",
         fitur: [
@@ -15,7 +15,7 @@ export const proyek = [
         {
         slug: "pendektesi-banjir",
         judul: "Sistem deteksi Banjir",
-        kategori: ["C++", "ESP32", "Iot", "Wokwi"],
+        kategori: ["Iot"],
         gambar: "/proyek/Pendektesi-Banjir.png",
         deskripsi: "Sistem Pendeteksi Ketinggian Air dan Banjir merupakan proyek berbasis Internet of Things (IoT) yang dirancang untuk memantau ketinggian permukaan air menggunakan sensor ultrasonik HC-SR04. Sistem ini memanfaatkan ESP32 sebagai mikrokontroler untuk memproses data sensor.",
         fitur: [
@@ -29,7 +29,7 @@ export const proyek = [
         {
         slug: "pengelolaan-database",
         judul: " Database Management System ",
-        kategori: ["SQL", "MariaDB", "MySQL", "XAMPP"],
+        kategori: ["XAMPP"],
         gambar: "/proyek/Pengelolaan-Database.png",
         deskripsi: "Database Management System merupakan kegiatan praktik pengelolaan basis data menggunakan MariaDB melalui XAMPP dan Command Prompt. Proyek ini bertujuan untuk memahami konsep dasar database serta mempelajari penggunaan Structured Query Language (SQL) dalam mengelola data.",
         fitur: [
@@ -44,7 +44,7 @@ export const proyek = [
         {
         slug: "portofolio-pribadi",
         judul: "Website Portofolio Pribadi",
-        kategori: ["HTML", "CSS", "JavaScript", "Next.js", "React"],
+        kategori: ["Next.js"],
         gambar: "/proyek/Portofolio.png",
         deskripsi: "Website Portofolio Pribadi merupakan website yang dibuat sebagai media untuk memperkenalkan identitas, kemampuan, pengalaman, dan hasil karya dalam bidang teknologi. Website ini menampilkan informasi tentang diri saya sebagai siswa Rekayasa Perangkat Lunak yang memiliki minat dalam pengembangan website dan pemrograman.",
         fitur: [
@@ -60,7 +60,7 @@ export const proyek = [
         {
         slug: "rancangan-aplikasi",
         judul: "UI/UX Design Aplikasi StepKuy",
-        kategori:  ["Figma", "UI/UX Design"],
+        kategori:  ["Figma"],
         gambar: "/proyek/Rancangan-Aplikasi.png",
         deskripsi: "StepKuy merupakan konsep rancangan aplikasi mobile yang berfokus pada jual beli sepatu bekas. Proyek ini dibuat menggunakan Figma dengan memperhatikan tampilan antarmuka (User Interface) dan pengalaman pengguna (User Experience).",
         fitur: [
@@ -75,7 +75,7 @@ export const proyek = [
         {
         slug: "website-berita",
         judul: "Website Berita Nine Elegant",
-        kategori:  ["HTML", "CSS", "JavaScript"],
+        kategori:  ["HTML"],
         gambar: "/proyek/web-berita.png",
         deskripsi: "Website Berita Nine Elegant merupakan platform informasi digital yang dirancang untuk menyajikan berbagai berita dan informasi terkini. Website ini memiliki tampilan modern dengan navigasi yang sederhana sehingga pengunjung dapat menemukan berita berdasarkan kategori seperti olahraga, sosial, ekonomi, dan politik.",
         fitur: [
