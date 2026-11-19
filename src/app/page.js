@@ -6,16 +6,13 @@ import { supabase } from "@/lib/supabase";
 import Kartu from "@/components/Kartu";
 import { buttonVariants } from "@/components/ui/button";
 
-const skills = [
-  { nama: "HTML", level: "Menengah" },
-  { nama: "CSS", level: "Menengah" },
-  { nama: "Git dan GitHub", level: "Dasar" },
-  { nama: "Desain poster dengan Canva", level: "Mahir" },
-  { nama: "JavaScript", level: "Dasar" },
-];
-
-
+export const revalidate = 60;
 export default async function Home() {
+   const { data: skills } = await supabase
+    .from("skills")
+    .select("*")
+    .order("id");
+
   const {data:proyekTerbaru, error} = await supabase
     .from("projects")
     .select("*")

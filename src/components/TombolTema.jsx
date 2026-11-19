@@ -22,18 +22,12 @@ export default function TombolTema() {
     }
 
     return (
-        <button
-            type="button"
+        <Button 
+            variant="outline"
             onClick={gantiTema}
-            className="rounded-lg border border-white px-3 py-1 text-sm font-semibold text-white hover:border-aksen hover:bg-aksen"
+            className="borderwhite bg-transparent text-white hover:bg-aksen hover:text-white"
         >
-            <span className="dark:hidden">
-                Mode Gelap
-            </span>
-
-            <span className="hidden dark:inline">
-                Mode Terang
-            </span>
-        </button>
+            {gelap ? "Mode Terang" : "Mode Gelap"}
+        </Button>
     );
 }
