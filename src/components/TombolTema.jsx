@@ -1,16 +1,12 @@
 
 "use client";
 
-import { useEffect } from "react";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 export default function TombolTema() {
-
-    // Mengambil tema yang tersimpan setelah komponen tampil
-    useEffect(() => {
-        if (localStorage.getItem("tema") === "gelap") {
-            document.documentElement.classList.add("dark");
-        }
-    }, []);
+const [gelap, setGelap] = useState(false);
+    
 
     function gantiTema() {
         const gelap = document.documentElement.classList.toggle("dark");
@@ -27,7 +23,7 @@ export default function TombolTema() {
             onClick={gantiTema}
             className="borderwhite bg-transparent text-white hover:bg-aksen hover:text-white"
         >
-            {gelap ? "Mode Terang" : "Mode Gelap"}
+            { gelap ? "Mode Terang" : "Mode Gelap"}
         </Button>
     );
 }

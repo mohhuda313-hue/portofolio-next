@@ -1,4 +1,5 @@
 import FormKontak from "@/components/FormKontak";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Kontak",
