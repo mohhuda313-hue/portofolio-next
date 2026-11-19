@@ -4,7 +4,7 @@
 import { useState } from "react";
 
 const kelasInput =
-  "mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2";
+  "mt-1 w-full rounded-lg border border-input bg-card p-2";
 
 export default function FormKontak() {
   // Kode 6.8: State semua isian
@@ -73,7 +73,7 @@ export default function FormKontak() {
         />
 
         {error.nama && (
-          <p className="mt-1 text-sm text-aksen dark:text-red-300">
+          <p className="mt-1 text-sm text-aksen">
             {error.nama}
           </p>
         )}
@@ -96,7 +96,7 @@ export default function FormKontak() {
         />
 
         {error.email && (
-          <p className="mt-1 text-sm text-aksen dark:text-red-300">
+          <p className="mt-1 text-sm text-aksen">
             {error.email}
           </p>
         )}
@@ -119,7 +119,7 @@ export default function FormKontak() {
         />
 
         {error.hp && (
-          <p className="mt-1 text-sm text-aksen dark:text-red-300">
+          <p className="mt-1 text-sm text-aksen">
             {error.hp}
           </p>
         )}
@@ -145,7 +145,7 @@ export default function FormKontak() {
         </select>
 
         {error.keperluan && (
-          <p className="mt-1 text-sm text-aksen dark:text-red-300">
+          <p className="mt-1 text-sm text-aksen">
             {error.keperluan}
           </p>
         )}
@@ -169,7 +169,7 @@ export default function FormKontak() {
         />
 
         {error.pesan && (
-          <p className="mt-1 text-sm text-aksen dark:text-red-300">
+          <p className="mt-1 text-sm text-aksen">
             {error.pesan}
           </p>
         )}

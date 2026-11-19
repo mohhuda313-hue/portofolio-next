@@ -1,20 +1,33 @@
 import FilterProyek from "@/components/FilterProyek";
-import { proyek } from "@/data/proyek";
+import { supabase } from "@/lib/supabase";
 
 export const metadata = {
     title: "Proyek",
     description: "Daftar proyek HTML, CSS, dan JavaScript karya M.Miftakhul Huda.",
 };
 
-export default function DaftarProyek() {
+export default async function DaftarProyek() {
+    const {data:proyek, error} = await supabase
+    .from("projects")
+    .select("*")
+    .order("created_at");
+
     return (
         <main className="mx-auto w-full max-w-5xl px-4 py-10">
-            <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">Proyek Saya</h1>
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+            <h1 className="text-3xl font-bold text-primary md:text-4xl">Proyek Saya</h1>
+            <p className="mt-3 text-lg text-muted-foreground">
                 Kumpulan hasil belajar saya di Kelas Industri UBIG. Klik kartu untuk melihat detailnya.
             </p>
+            {error && (
+                <p className="mt-8 rounded-xl border border-dashed border-input text-center text-aksen">Data proyek gagal dimuat: {error.message}</p>
+            )}
+            {proyek && proyek.length === 0 && (
+                <p className="mt-8 rounded-xl border border-dashed border-input text-center text-aksen">Belum ada proyek di database</p>
+            )}
 
-            <FilterProyek proyek={proyek} />
+            {proyek && proyek.length > 0 && (
+                <FilterProyek proyek={proyek} />
+            )}
         </main>
     );
 }
